@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <Windows.h>
-#include <conio.h>  // Necessário para getch()
-
+#include <Windows.h> // necessario para manipular o XY
+#include <conio.h>  // NecessÃ¡rio para getch()
+// variaveis globais 
 float custo_por_pessoa;
 float total_custos;
 int total_pessoas;
@@ -20,7 +20,7 @@ void XY(int x, int y)
 
 
 
-// case 1
+ // case 1 - adicionar mais pessoas de consumo na mesa
 int ADDPessoas()
 {
 	int Pessoa;
@@ -33,7 +33,7 @@ int ADDPessoas()
 	system("CLS");
 	return total_pessoas += Pessoa;
 }
-// case 2
+// case 2 - adicionar mais valor consumido na mesa
 float ADDCustos()
 {
 	float custo;
@@ -46,7 +46,7 @@ float ADDCustos()
 	system("CLS");
 	return total_custos += custo;
 }
-// case 3
+// case 3 - conta para saber quando vai dar de gorgeta para o garcon
 int GarconTotalCustos(float* total_custos, float* conta)
 {
 	int ValorGarcon = 10;
@@ -63,7 +63,7 @@ int GarconTotalCustos(float* total_custos, float* conta)
 	system("CLS");
 	return *conta;
 }
-//case 4
+//case 4 - mostra a nota fiscal da soma e da divisao do que cada um da mesa tera que pagar caso necessite de dividir conta por pessoa
 float TotalAPagarPorPessoa(int* total_pessoas, float* total_custos, float* conta)
 {
 	system("CLS");
@@ -108,7 +108,7 @@ int main()
 	int y;
 	char tecla;
 
-	// laço de repeticao MENU
+	// laÃ§o de repeticao MENU
 
 	while (1)
 	{
@@ -134,7 +134,7 @@ int main()
 			setvbuf(stdin, NULL, _IONBF, 0); // limpa o buffer de entrada
 			tecla = _getch(); // capitura a tecla e add na variavel tecla
 
-			if (tecla == 13) // codigo 13 é a tecla ENTER no caso estou verificando se foi pressionado tecla ENTER	
+			if (tecla == 13) // codigo 13 Ã© a tecla ENTER no caso estou verificando se foi pressionado tecla ENTER	
 			{
 				if (Escolha == 0) ADDPessoas();
 				if (Escolha == 1) ADDCustos();
@@ -172,25 +172,25 @@ int main()
 
 
 /*
-Códigos ASCII para teclas comuns:
+CÃ³digos ASCII para teclas comuns:
 Enter: 13
-Espaço (Space): 32
+EspaÃ§o (Space): 32
 Escape (Esc): 27
 Backspace: 8
 Tab: 9
-Códigos para letras e números:
-Letras maiúsculas (A-Z): 65 - 90
-Letras minúsculas (a-z): 97 - 122
-Números (0-9): 48 - 57
-Códigos para teclas de controle (modificadas):
-As teclas de controle, como as setas, têm dois códigos: um prefixo (224 ou 0) e o código da tecla em si. Portanto, ao capturar uma dessas teclas com _getch(), você terá que chamar _getch() duas vezes.
+CÃ³digos para letras e nÃºmeros:
+Letras maiÃºsculas (A-Z): 65 - 90
+Letras minÃºsculas (a-z): 97 - 122
+NÃºmeros (0-9): 48 - 57
+CÃ³digos para teclas de controle (modificadas):
+As teclas de controle, como as setas, tÃªm dois cÃ³digos: um prefixo (224 ou 0) e o cÃ³digo da tecla em si. Portanto, ao capturar uma dessas teclas com _getch(), vocÃª terÃ¡ que chamar _getch() duas vezes.
 
-Exemplo de códigos de setas:
+Exemplo de cÃ³digos de setas:
 Seta para esquerda: 224, 75
 Seta para direita: 224, 77
 Seta para cima: 224, 72
 Seta para baixo: 224, 80
-Exemplo de códigos de teclas de função (F1 - F12):
+Exemplo de cÃ³digos de teclas de funÃ§Ã£o (F1 - F12):
 F1: 0, 59
 F2: 0, 60
 F3: 0, 61
