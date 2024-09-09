@@ -1,0 +1,5 @@
+﻿  main.c
+Z:\PROGRAMACAO\VISUAL STUDIO\Projetos Linguagem (C)\ProjetoInterface\ProjetoInterface\main.c(64,9): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+Z:\PROGRAMACAO\VISUAL STUDIO\Projetos Linguagem (C)\ProjetoInterface\ProjetoInterface\main.c(91,10): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
+Z:\PROGRAMACAO\VISUAL STUDIO\Projetos Linguagem (C)\ProjetoInterface\ProjetoInterface\main.c(107,6): warning C4101: 'x': variável local não referenciada
+  ProjetoInterface.vcxproj -> Z:\PROGRAMACAO\VISUAL STUDIO\Projetos Linguagem (C)\ProjetoInterface\x64\Debug\ProjetoInterface.exe
